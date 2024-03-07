@@ -6,13 +6,13 @@ Download this script anywhere and drag the files you want to clean onto it.
 
 ## Examples
 #### Example 1
-```
+```bash
 File1 1.txt     -> File1.txt
 File 1 2.txt    -> File 1.txt
 ```
 
 ## Flags
-1. `RENAME_EXISTING` - default=1. If set, and the script tries to rename file A to an already existing file B, then it renames file B, appending the last modified datetime before the extension. Otherwise, it does not rename either file. For example:
+1. `RENAME_EXISTING` - default=1. If set, and the script tries to rename file A to an already existing file B, then it first renames file B, appending the last modified datetime before the extension, and then renames file A. Otherwise, it does not rename either file. For example:
 ```bash
 # If flag is not set
 File1 2.txt     -> File1 2.txt
